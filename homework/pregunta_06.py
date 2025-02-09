@@ -6,7 +6,12 @@ librerias de pandas para resolver las preguntas.
 """
 
 
+import pandas as pd
 def pregunta_06():
+    datos=pd.read_csv('files/input/tbl1.tsv',delimiter="\t")
+    unicos=(datos["c4"].str.upper()).unique()
+    unicos=sorted(unicos)
+    return unicos
     """
     Retorne una lista con los valores unicos de la columna `c4` del archivo
     `tbl1.csv` en mayusculas y ordenados alfabéticamente.
@@ -15,3 +20,4 @@ def pregunta_06():
     ['A', 'B', 'C', 'D', 'E', 'F', 'G']
 
     """
+pregunta_06()
